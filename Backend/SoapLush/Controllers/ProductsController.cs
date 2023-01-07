@@ -26,14 +26,14 @@ namespace SoapLush.Controllers
             {
                 var productDto = new Dtos.ProductDto()
                 {
-                    Id = product.Id,
+                    id = product.id,
                     Name = product.Name,
                     Image = product.Image,
                     Description= product.Description,
                     Ingredients= product.Ingredients,
                     Price= product.Price,
                     CategoryId = product.CategoryId,
-                    SubCategoryId= product.SubCategoryId,
+                    SubCategoryId= (int)product.SubCategoryId,
                 };
 
                 productsDto.Add(productDto);
@@ -53,14 +53,14 @@ namespace SoapLush.Controllers
             }
             var productDto = new Dtos.ProductDto()
             {
-                Id= product.Id,
+                id = product.id,
                 Name = product.Name,
                 Image = product.Image,
                 Description= product.Description,
                 Ingredients= product.Ingredients,
                 Price= product.Price,
                 CategoryId= product.CategoryId,
-                SubCategoryId= product.SubCategoryId,
+                SubCategoryId= (int)product.SubCategoryId,
             };
             return Ok(productDto);
         }
@@ -83,17 +83,17 @@ namespace SoapLush.Controllers
 
             var productDto = new Dtos.ProductDto()
             {
-                Id = product.Id,
+                id = product.id,
                 Name = product.Name,
                 Image = product.Image,
                 Description = product.Description,
                 Ingredients = product.Ingredients,
                 Price = product.Price,
                 CategoryId = product.CategoryId,
-                SubCategoryId = product.SubCategoryId,
+                SubCategoryId = (int)product.SubCategoryId,
             };
 
-            return CreatedAtAction(nameof(GetProductById), new {id =productDto.Id}, productDto);
+            return CreatedAtAction(nameof(GetProductById), new {id =productDto.id}, productDto);
         }
 
         [HttpDelete("{id:int}")]
@@ -107,14 +107,14 @@ namespace SoapLush.Controllers
 
             var productDto = new Dtos.ProductDto()
             {
-                Id = product.Id,
+                id = product.id,
                 Name = product.Name,
                 Image = product.Image,
                 Description = product.Description,
                 Ingredients = product.Ingredients,
                 Price = product.Price,
                 CategoryId = product.CategoryId,
-                SubCategoryId = product.SubCategoryId,
+                SubCategoryId = (int)product.SubCategoryId,
             };
 
             return Ok(productDto);
@@ -140,14 +140,14 @@ namespace SoapLush.Controllers
 
             var productDto = new Dtos.ProductDto()
             {
-                Id = product.Id,
+                id = product.id,
                 Name = product.Name,
                 Image = product.Image,
                 Description = product.Description,
                 Ingredients = product.Ingredients,
                 Price = product.Price,
                 CategoryId = product.CategoryId,
-                SubCategoryId = product.SubCategoryId,
+                SubCategoryId = (int)product.SubCategoryId,
             };
 
             return Ok(productDto);

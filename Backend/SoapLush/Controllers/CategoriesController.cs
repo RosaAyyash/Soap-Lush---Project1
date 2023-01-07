@@ -26,7 +26,7 @@ namespace SoapLush.Controllers
             {
                 var categoryDto = new Dtos.CategoryDto()
                 {
-                    Id = category.Id,
+                    id = category.id,
                     Name = category.Name,
                     Image = category.Image,
                     SubCategories = category.SubCategories,
@@ -49,7 +49,7 @@ namespace SoapLush.Controllers
             }
             var categoryDto = new Dtos.CategoryDto()
             {
-                Id = category.Id,
+                id = category.id,
                 Name = category.Name,
                 Image = category.Image,
                 SubCategories = category.SubCategories,
@@ -71,13 +71,13 @@ namespace SoapLush.Controllers
 
             var categoryDto = new Dtos.CategoryDto()
             {
-                Id = category.Id,
+                id = category.id,
                 Name = category.Name,
                 Image = category.Image,
                 SubCategories = category.SubCategories,
             };
 
-            return CreatedAtAction(nameof(GetCategoryById), new { id = categoryDto.Id }, categoryDto);
+            return CreatedAtAction(nameof(GetCategoryById), new { id = categoryDto.id }, categoryDto);
         }
 
         [HttpDelete("{id:int}")]
@@ -91,7 +91,7 @@ namespace SoapLush.Controllers
 
             var categoryDto = new Dtos.CategoryDto()
             {
-               Id = category.Id,
+               id = category.id,
                Name = category.Name,
                Image = category.Image,
                SubCategories = category.SubCategories,
@@ -116,7 +116,7 @@ namespace SoapLush.Controllers
 
             var categoryDto = new Dtos.CategoryDto()
             {
-                Id = category.Id,
+                id = category.id,
                 Name = category.Name,
                 Image = category.Image,
                 SubCategories= category.SubCategories,

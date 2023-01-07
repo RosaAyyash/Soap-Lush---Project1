@@ -22,7 +22,7 @@ namespace SoapLush.Repositories
 
         public async Task<Product> DeleteProductAsync(int id)
         {
-            var product = await _soapLushDbContext.Products.FirstOrDefaultAsync(x => x.Id == id);
+            var product = await _soapLushDbContext.Products.FirstOrDefaultAsync(x => x.id == id);
             if (product == null)
             {
                 return null;
@@ -40,7 +40,7 @@ namespace SoapLush.Repositories
 
         public async Task<Product> GetProductAsync(int id)
         {
-            var product = await _soapLushDbContext.Products.FirstOrDefaultAsync(x => x.Id == id);
+            var product = await _soapLushDbContext.Products.FirstOrDefaultAsync(x => x.id == id);
             if (product == null)
             {
                 return null;
@@ -50,7 +50,7 @@ namespace SoapLush.Repositories
 
         public async Task<Product> UpdateProductAsync(int id, Product product)
         {
-            var existingProduct = await _soapLushDbContext.Products.FirstOrDefaultAsync(x => x.Id == id);
+            var existingProduct = await _soapLushDbContext.Products.FirstOrDefaultAsync(x => x.id == id);
             if (existingProduct == null)
             {
                 return null;

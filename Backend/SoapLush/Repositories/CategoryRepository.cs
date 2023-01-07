@@ -20,7 +20,7 @@ namespace SoapLush.Repositories
 
         public async Task<Category> DeleteCategoryAsync(int id)
         {
-            var category = await _soapLushDbContext.Categories.FirstOrDefaultAsync(x => x.Id == id);
+            var category = await _soapLushDbContext.Categories.FirstOrDefaultAsync(x => x.id == id);
             if (category == null) { return null; }
             _soapLushDbContext.Categories.Remove(category);
             await _soapLushDbContext.SaveChangesAsync();
@@ -34,7 +34,7 @@ namespace SoapLush.Repositories
 
         public async Task<Category> GetCategoryAsync(int id)
         {
-            var category = await _soapLushDbContext.Categories.FirstOrDefaultAsync(x => x.Id == id);
+            var category = await _soapLushDbContext.Categories.FirstOrDefaultAsync(x => x.id == id);
             if (category == null)
             {
                 return null;
@@ -45,7 +45,7 @@ namespace SoapLush.Repositories
 
         public async Task<Category> UpdateCategoryAsync(int id, Category category)
         {
-            var existingCategory = await _soapLushDbContext.Categories.FirstOrDefaultAsync(x => x.Id==id);
+            var existingCategory = await _soapLushDbContext.Categories.FirstOrDefaultAsync(x => x.id==id);
             if (existingCategory == null) { return null; }
 
             existingCategory.Name= category.Name;
