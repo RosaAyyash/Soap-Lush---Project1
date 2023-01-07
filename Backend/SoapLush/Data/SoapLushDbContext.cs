@@ -9,7 +9,7 @@ namespace SoapLush.Data
         {
         }
 
-        //ModelBuilder.Entity<Category>().HasMany(x=>x.SubCategories).WithOptional(x=> x.subCategory)
+        //ModelBuilder.Entity<Category>().HasMany(x=>x.SubCategories).WithOptional(x=> x.SubCategory)
 
 
         public DbSet<Product> Products { get; set; }
