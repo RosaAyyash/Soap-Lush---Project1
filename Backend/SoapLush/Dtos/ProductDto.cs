@@ -1,4 +1,6 @@
-﻿namespace SoapLush.Dtos
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace SoapLush.Dtos
 {
     public class ProductDto
     {
@@ -16,6 +18,7 @@
 
         public int CategoryId { get; set; }
 
+        [AllowNull]
         public int SubCategoryId { get; set; }
     }
 }

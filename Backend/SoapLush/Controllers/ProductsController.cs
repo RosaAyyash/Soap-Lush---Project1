@@ -90,7 +90,7 @@ namespace SoapLush.Controllers
                 Ingredients = product.Ingredients,
                 Price = product.Price,
                 CategoryId = product.CategoryId,
-                SubCategoryId = (int)product.SubCategoryId,
+                //SubCategoryId = (int)product.SubCategoryId,
             };
 
             return CreatedAtAction(nameof(GetProductById), new {id =productDto.id}, productDto);

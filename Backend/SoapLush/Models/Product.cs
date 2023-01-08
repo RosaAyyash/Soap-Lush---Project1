@@ -1,4 +1,6 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 
@@ -16,11 +18,14 @@ namespace SoapLush.Models
 
         public double Price { get; set; }
 
+        [ForeignKey("Category")]
         public int CategoryId { get; set; } //foreign key
-        public Category? Category { get; set; } //Reference Navigation
+        public Category Category { get; set; } //Reference Navigation
 
-        public int? SubCategoryId { get; set; } //foreign key
 
+        [ForeignKey("SubCategory")]
+        [AllowNull]
+        public int? SubCategoryId { get; set; } = null;//foreign key
         public SubCategory? SubCategory { get; set; } //Reference Navigation
 
         

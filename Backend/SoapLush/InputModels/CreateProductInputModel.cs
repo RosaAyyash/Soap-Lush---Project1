@@ -1,4 +1,6 @@
-﻿namespace SoapLush.InputModels
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace SoapLush.InputModels
 {
     public class CreateProductInputModel
     {
@@ -13,6 +15,7 @@
 
         public int CategoryId { get; set; }
 
+        [AllowNull]
         public int SubCategoryId { get; set; }
     }
 }

@@ -15,6 +15,7 @@ namespace SoapLush.Repositories
 
         public async Task<Product> CreateProductAsync(Product product)
         {
+            product.SubCategoryId = null;
             await _soapLushDbContext.Products.AddAsync(product);
             await _soapLushDbContext.SaveChangesAsync();
             return product;
